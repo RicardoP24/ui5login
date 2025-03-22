@@ -1,0 +1,15 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="ui5.walkthrough.controller.Home">
+
+    <Page title="Bem-vindo!">
+        <content>
+            <VBox class="home-content">
+                <Text text="Você está logado!" />
+                <Button text="Sair" press="onLogout" />
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>
