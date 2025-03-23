@@ -3,7 +3,6 @@
     xmlns="sap.m"
     controllerName="ui5.walkthrough.controller.Login">
     
-    <App id="app">
         <Page title="Login">
             <content>
                 <VBox  class="vbox-Login sapUiSmallMarginTop"  >
@@ -14,6 +13,5 @@
                 </VBox>
             </content>
         </Page>
-    </App>
 
 </mvc:View>

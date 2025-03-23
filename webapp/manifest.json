@@ -26,7 +26,7 @@
             ]
         },
         "rootView": {
-            "viewName": "ui5.walkthrough.view.Login",
+            "viewName": "ui5.walkthrough.view.App",
             "type": "XML"
         },
         "routing": {
