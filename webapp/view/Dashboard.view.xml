@@ -18,6 +18,7 @@
             </VBox>
 
             <Table id="invoiceTable" growing="true" items="{invoice>/invoices}">
+
                 <columns>
                     <Column>
                         <Text text="ID" />
@@ -32,7 +33,9 @@
                         <Text text="Ações" />
                     </Column>
                 </columns>
+
                 <items>
+
                     <ColumnListItem>
                         <cells>
                             <Text text="{invoice>id}" />
@@ -41,7 +44,9 @@
                             <Button text="Remover" press=".onRemoveInvoice" />
                         </cells>
                     </ColumnListItem>
+
                 </items>
+                
             </Table>
         </content>
     </Page>
