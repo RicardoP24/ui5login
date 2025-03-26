@@ -2,7 +2,7 @@ sap.ui.define([
     "sap/ui/core/UIComponent",
     "sap/ui/model/json/JSONModel",
     "sap/ui/model/resource/ResourceModel"
-], (UIComponent) => {
+], (UIComponent,JSONModel) => {
     "use strict";
 
     return UIComponent.extend("ui5.walkthrough.Component", {
@@ -14,6 +14,15 @@ sap.ui.define([
 
         init: function () {
             UIComponent.prototype.init.apply(this, arguments);
+            let user = new JSONModel(
+                {
+                    isLoggedIn: false,
+                    data:{}
+                }
+            );
+
+            this.setModel(user,"user")
+
             this.getRouter().initialize();
         }
     });

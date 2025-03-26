@@ -1,5 +1,6 @@
 sap.ui.define([
    "sap/ui/core/mvc/Controller",
+   "sap/ui/model/json/JSONModel",
    "sap/m/MessageToast"
 ], function (Controller, MessageToast) {
    "use strict";
@@ -15,7 +16,7 @@ sap.ui.define([
             return;
         }
 
-        fetch("http://localhost:8080/login.php", {
+        fetch("http://localhost:8000/public/index.php/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -25,16 +26,21 @@ sap.ui.define([
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                MessageToast.show("Login bem-sucedido!");
-                oRouter.navTo("home"); // Navega para a tela Home
+                // MessageToast.show("Login bem-sucedido!");
+                let userModel = this.getOwnerComponent().getModel("user");
+                userModel.setProperty("/isLoggedIn",true);
+                userModel.setProperty("/data",data.user);
+
+                oRouter.navTo("dashboard"); // Navega para a tela Home
 
 
             } else {
-                MessageToast.show(data.message);
+                // MessageToast.show(data.message);
+                console.error(data);
             }
         })
         .catch(error => {
-            MessageToast.show(error);
+            // MessageToast.show(error);
             console.error(error);
         });
     }

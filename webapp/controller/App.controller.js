@@ -1,10 +1,9 @@
 sap.ui.define([
-   "sap/ui/core/mvc/Controller"
-], function (Controller){
+    "sap/ui/core/mvc/Controller"
+], function (Controller) {
     "use strict";
 
     return Controller.extend("ui5.walkthrough.controller.App", {
-        
-})
-
+        // Your controller logic here
+    });
 });

@@ -6,7 +6,8 @@
     <Page title="Bem-vindo!">
         <content>
             <VBox class="home-content">
-                <Text text="Você está logado!" />
+
+                <Text text="Você está logado! {viewModel>/userName}" />
                 <Button text="Sair" press="onLogout" />
             </VBox>
         </content>

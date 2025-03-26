@@ -1,0 +1,48 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="ui5.walkthrough.controller.Dashboard">
+
+    <Page title="Dashboard de Faturas">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <HBox>
+                    <Label text="Valor:" width="80px" />
+                    <Input id="inputAmount" />
+                </HBox>
+                <HBox>
+                    <Label text="Descrição:" width="80px" />
+                    <Input id="inputDescription" />
+                </HBox>
+                <Button text="Adicionar Fatura" press=".onAddInvoice" />
+            </VBox>
+
+            <Table id="invoiceTable" growing="true" items="{invoice>/invoices}">
+                <columns>
+                    <Column>
+                        <Text text="ID" />
+                    </Column>
+                    <Column>
+                        <Text text="Valor" />
+                    </Column>
+                    <Column>
+                        <Text text="Descrição" />
+                    </Column>
+                    <Column>
+                        <Text text="Ações" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{invoice>id}" />
+                            <Text text="{invoice>amount}" />
+                            <Text text="{invoice>description}" />
+                            <Button text="Remover" press=".onRemoveInvoice" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
