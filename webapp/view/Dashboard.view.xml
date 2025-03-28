@@ -7,7 +7,7 @@
         <content>
             <VBox class="sapUiSmallMargin">
                 <HBox>
-                    <Label text="Valor:" width="80px" />
+                    <Label text="{i18n>LabelValorDashboard} :" width="80px" />
                     <Input id="inputAmount" />
                 </HBox>
                 <HBox>

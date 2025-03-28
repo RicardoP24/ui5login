@@ -29,7 +29,9 @@
             "viewName": "ui5.walkthrough.view.App",
             "type": "XML"
         },
+
         "routing": {
+
             "config": {
                 "routerClass": "sap.m.routing.Router",
                 "viewType": "XML",
@@ -68,6 +70,20 @@
                     "viewName": "Dashboard",
                     "viewLevel": 2
                 }
+            }
+        },
+        
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "ui5.walkthrough.i18n.i18n",
+                    "supportedLocales": [
+                        ""
+                    ],
+                    "fallbackLocale": ""
+                },
+                "uri": "<uriRelativeToManifest>"
             }
         }
     }
